@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CITAssignment3", "CITAssignment3\CITAssignment3.csproj", "{C3485C96-B486-4047-AA9A-5A5095D32071}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment3TestSuite", "Assignment3TestSuite\Assignment3TestSuite.csproj", "{449F5FD8-4976-405B-9BA9-D0FB604F2FA1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C3485C96-B486-4047-AA9A-5A5095D32071}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3485C96-B486-4047-AA9A-5A5095D32071}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3485C96-B486-4047-AA9A-5A5095D32071}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3485C96-B486-4047-AA9A-5A5095D32071}.Release|Any CPU.Build.0 = Release|Any CPU
+		{449F5FD8-4976-405B-9BA9-D0FB604F2FA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{449F5FD8-4976-405B-9BA9-D0FB604F2FA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{449F5FD8-4976-405B-9BA9-D0FB604F2FA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{449F5FD8-4976-405B-9BA9-D0FB604F2FA1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
