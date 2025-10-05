@@ -12,9 +12,9 @@ public class Program
 {
     static void Main()
     {
-        TcpListener server = new(IPAddress.Any, 50004);
+        TcpListener server = new(IPAddress.Any, 5000);
         server.Start();
-        Console.WriteLine("Server running on port 50004...");
+        Console.WriteLine("Server running on port 5000...");
         while (true)
         {
             TcpClient client = server.AcceptTcpClient();
