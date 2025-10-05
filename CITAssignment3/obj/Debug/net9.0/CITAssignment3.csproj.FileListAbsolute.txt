@@ -7,6 +7,7 @@ C:\Users\LENOVO\RiderProjects\CITAssignment3\CITAssignment3\obj\Debug\net9.0\CIT
 C:\Users\LENOVO\RiderProjects\CITAssignment3\CITAssignment3\obj\Debug\net9.0\CITAssignment3.AssemblyInfoInputs.cache
 C:\Users\LENOVO\RiderProjects\CITAssignment3\CITAssignment3\obj\Debug\net9.0\CITAssignment3.AssemblyInfo.cs
 C:\Users\LENOVO\RiderProjects\CITAssignment3\CITAssignment3\obj\Debug\net9.0\CITAssignment3.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\RiderProjects\CITAssignment3\CITAssignment3\obj\Debug\net9.0\CITAssignment3.sourcelink.json
 C:\Users\LENOVO\RiderProjects\CITAssignment3\CITAssignment3\obj\Debug\net9.0\CITAssignment3.dll
 C:\Users\LENOVO\RiderProjects\CITAssignment3\CITAssignment3\obj\Debug\net9.0\refint\CITAssignment3.dll
 C:\Users\LENOVO\RiderProjects\CITAssignment3\CITAssignment3\obj\Debug\net9.0\CITAssignment3.pdb
