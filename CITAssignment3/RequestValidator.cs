@@ -26,19 +26,50 @@ public class RequestValidator
             errors.Add("missing path");
 
         // date
-        if (string.IsNullOrEmpty(request.Date))
+        if (request.Date is null)
         {
             errors.Add("missing date");
         }
-        else if (!long.TryParse(request.Date, out _))
+        else
         {
-            errors.Add("illegal date");
+            switch (request.Date)
+            {
+                case long:
+                case int:
+                case short:
+                case byte:
+                    break;
+                case string s:
+                    if (!long.TryParse(s, out _))
+                        errors.Add("illegal date");
+                    break;
+                case JsonElement je:
+                    if (je.ValueKind == JsonValueKind.Number)
+                    {
+                        if (!je.TryGetInt64(out _))
+                            errors.Add("illegal date");
+                    }
+                    else if (je.ValueKind == JsonValueKind.String)
+                    {
+                        var sv = je.GetString();
+                        if (string.IsNullOrEmpty(sv) || !long.TryParse(sv, out _))
+                            errors.Add("illegal date");
+                    }
+                    else
+                    {
+                        errors.Add("illegal date");
+                    }
+                    break;
+                default:
+                    errors.Add("illegal date");
+                    break;
+            }
         }
 
         // body
         if (request.Method is "create" or "update" or "echo")
         {
-            if (string.IsNullOrEmpty(request.Body))
+            if (request.Body is null)
             {
                 errors.Add("missing body");
             }
@@ -46,7 +77,10 @@ public class RequestValidator
             {
                 try
                 {
-                    JsonDocument.Parse(request.Body);
+                    if (request.Body is string s)
+                        JsonDocument.Parse(s);
+                    else
+                        JsonDocument.Parse(JsonSerializer.Serialize(request.Body));
                 }
                 catch
                 {

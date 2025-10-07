@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uxVFTqWW+8g=",
+  "dgSpecHash": "8wzEKXIwaIE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\LENOVO\\RiderProjects\\CITAssignment3\\Assignment3TestSuite\\Assignment3TestSuite.csproj",
+  "projectFilePath": "C:\\Users\\LENOVO\\Desktop\\CITAssignment3 - Copy\\Assignment3TestSuite\\Assignment3TestSuite.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.codecoverage\\17.8.0\\microsoft.codecoverage.17.8.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.net.test.sdk\\17.8.0\\microsoft.net.test.sdk.17.8.0.nupkg.sha512",

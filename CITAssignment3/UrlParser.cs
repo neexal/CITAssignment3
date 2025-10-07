@@ -1,9 +1,9 @@
-﻿namespace CITAssignment3;
+﻿﻿namespace CITAssignment3;
 
 public class UrlParser
 {
     public string Path { get; set; }
-    public string Id { get; set; }
+    public int Id { get; set; }
     public bool HasId { get; set; }
 
     public bool ParseUrl(string url)
@@ -19,8 +19,15 @@ public class UrlParser
 
         if (parts.Length > 2)
         {
-            Id = parts[2];
-            HasId = true;
+            if (int.TryParse(parts[2], out int id))
+            {
+                Id = id;
+                HasId = true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         return true;

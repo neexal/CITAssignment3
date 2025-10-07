@@ -3,5 +3,5 @@
 public class Response
 {
     public string Status { get; set; }
-    public string? Body { get; set; }
+    public object? Body { get; set; }
 }

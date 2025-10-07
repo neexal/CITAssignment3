@@ -31,7 +31,7 @@ public class CategoryService
 
     public bool UpdateCategory(int id, string newName)
     {
-        var category = GetCategory(id);
+        var category = categories.FirstOrDefault(c => c.Id == id);
         if (category == null) return false;
         category.Name = newName;
         return true;
@@ -39,7 +39,7 @@ public class CategoryService
 
     public bool DeleteCategory(int id)
     {
-        var category = GetCategory(id);
+        var category = categories.FirstOrDefault(c => c.Id == id);
         if (category == null) return false;
         categories.Remove(category);
         return true;

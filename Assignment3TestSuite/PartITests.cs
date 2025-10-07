@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using CITAssignment3;
 using Xunit;
 
@@ -38,7 +38,7 @@ public class PartITests
         // Assert
         Assert.True(result);
         Assert.True(urlParser.HasId);
-        Assert.Equal("5", urlParser.Id);
+        Assert.Equal(5, urlParser.Id);
         Assert.Equal("/api/categories", urlParser.Path);
     }
 
@@ -56,7 +56,7 @@ public class PartITests
         var request = new Request
         {
             Path = "/api/xxx",
-            Date = DateTimeOffset.UtcNow.ToUnixTimeSeconds().ToString()
+            Date = DateTimeOffset.UtcNow.ToUnixTimeSeconds()
         };
         // Act
         var result = requestValidator.ValidateRequest(request);
@@ -73,7 +73,7 @@ public class PartITests
         {
             Method = "fetch",
             Path = "/api/categories/1",
-            Date = DateTimeOffset.UtcNow.ToUnixTimeSeconds().ToString()
+            Date = DateTimeOffset.UtcNow.ToUnixTimeSeconds()
         };
         // Act
         var result = requestValidator.ValidateRequest(request);
@@ -90,7 +90,7 @@ public class PartITests
         {
             Method = "read",
             Path = "",
-            Date = DateTimeOffset.UtcNow.ToUnixTimeSeconds().ToString()
+            Date = DateTimeOffset.UtcNow.ToUnixTimeSeconds()
         };
         // Act
         var result = requestValidator.ValidateRequest(request);
@@ -143,7 +143,7 @@ public class PartITests
         {
             Method = method,
             Path = "/api/xxx",
-            Date = DateTimeOffset.UtcNow.ToUnixTimeSeconds().ToString()
+            Date = DateTimeOffset.UtcNow.ToUnixTimeSeconds()
         };
         // Act
         var result = requestValidator.ValidateRequest(request);
@@ -162,7 +162,7 @@ public class PartITests
         {
             Method = method,
             Path = "/api/xxx",
-            Date = DateTimeOffset.UtcNow.ToUnixTimeSeconds().ToString(),
+            Date = DateTimeOffset.UtcNow.ToUnixTimeSeconds(),
             Body = body
         };
         // Act
@@ -182,7 +182,7 @@ public class PartITests
         {
             Method = method,
             Path = "/api/xxx",
-            Date = DateTimeOffset.UtcNow.ToUnixTimeSeconds().ToString(),
+            Date = DateTimeOffset.UtcNow.ToUnixTimeSeconds(),
             Body = body
         };
         // Act
